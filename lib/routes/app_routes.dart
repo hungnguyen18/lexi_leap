@@ -2,20 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:lexi_leap/ui/screens/auth/login_screen.dart';
 import 'package:lexi_leap/ui/screens/home/home_screen.dart';
 
-class AppRoutes {
-  static const String home = '/';
-  static const String login = '/login';
+// Thêm các màn hình khác khi cần
 
-  static String get initialRoute => home;
+class AppRoutes {
+  static const String initialRoute = '/';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
-      case home:
-        return MaterialPageRoute(builder: (_) => HomeScreen());
-      case login:
+      case '/':
         return MaterialPageRoute(builder: (_) => LoginScreen());
+      case '/home':
+        return MaterialPageRoute(builder: (_) => HomeScreen());
+      // Thêm các case cho các màn hình khác
       default:
-        return MaterialPageRoute(builder: (_) => HomeScreen()); // Fallback
+        return MaterialPageRoute(builder: (_) => LoginScreen()); // Fallback
     }
   }
 }

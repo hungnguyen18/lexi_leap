@@ -1,11 +1,17 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:lexi_leap/core/constants/strings.dart';
+import 'package:lexi_leap/firebase_options.dart';
 import 'package:lexi_leap/routes/app_routes.dart'; // Giả định bạn đã định nghĩa các route ở đây
 import 'package:lexi_leap/ui/theme/app_theme.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(MyApp());
 }
 

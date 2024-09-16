@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1068177468691",
+    "project_id": "lexi-leap-app",
+    "storage_bucket": "lexi-leap-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1068177468691:android:ef918e9ad1374f9f82fee6",
+        "android_client_info": {
+          "package_name": "com.ute.lexileap"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDy-ieZJ8EJfKYY21GnRut0m9QyXQb6Tkc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1068177468691:android:3ba7064d34af086982fee6",
+        "android_client_info": {
+          "package_name": "com.yourdomain.lexileap"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDy-ieZJ8EJfKYY21GnRut0m9QyXQb6Tkc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

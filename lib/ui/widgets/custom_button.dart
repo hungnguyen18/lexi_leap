@@ -10,6 +10,7 @@ class CustomButton extends StatelessWidget {
   final double? fontSize;
   final double? height;
   final double? width;
+  final IconData? icon;
 
   CustomButton({
     required this.label,
@@ -19,6 +20,7 @@ class CustomButton extends StatelessWidget {
     this.fontSize,
     this.height,
     this.width,
+    this.icon,
   });
 
   @override
@@ -26,23 +28,29 @@ class CustomButton extends StatelessWidget {
     return SizedBox(
       height: height ?? AppSizes.buttonHeight,
       width: width ?? double.infinity, // Full width by default
-      child: ElevatedButton(
-        style: ElevatedButton.styleFrom(
-          backgroundColor: color ?? AppColors.primaryColor,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(AppSizes.borderRadius),
-          ),
-          padding: const EdgeInsets.symmetric(
-              vertical: AppSizes.buttonPaddingVertical),
-        ),
-        onPressed: onPressed,
-        child: Text(
+      child: ElevatedButton.icon(
+        icon: icon != null
+            ? Icon(
+                icon,
+                color: textColor ?? Colors.white,
+              )
+            : SizedBox(),
+        label: Text(
           label,
           style: TextStyle(
             color: textColor ?? Colors.white,
             fontSize: fontSize ?? AppSizes.buttonFontSize,
           ),
         ),
+        style: ElevatedButton.styleFrom(
+          backgroundColor: color ?? AppColors.primaryColor,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(AppSizes.borderRadius),
+          ),
+          padding:
+              EdgeInsets.symmetric(vertical: AppSizes.buttonPaddingVertical),
+        ),
+        onPressed: onPressed,
       ),
     );
   }
